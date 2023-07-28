@@ -23,7 +23,7 @@
     Variable Rules and URL Building
 """
 
-from flask import Flask, redirect, url_for
+from flask import Flask, redirect, url_for, render_template
 
 app = Flask(__name__)
 
@@ -37,7 +37,7 @@ We are building the URL Dynamically using variable rules.
 '''
 @app.route('/Success/<int:score>')     
 def Success(score):
-    return "The person has passed and the marks is " + str(score)
+    return "<html><body><h1></h1>The Result is Passed</body></html>"
 
 @app.route('/fail/<int:score>')
 def fail(score):
